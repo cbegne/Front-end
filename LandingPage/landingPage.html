@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="shortcut icon" href="./random-line.ico">
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- my css -->
+    <link rel="stylesheet" href="./public/css/landingPage_index.css">
+    <link rel="stylesheet" href="./public/css/landingPage_head_foot.css">
+    <link rel="stylesheet" href="./public/css/landingPage_center.css">
+    <!-- my js -->
+    <script type="application/javascript" src="./public/js/landingPage.js"></script>
+    <!-- Standard -->
+    <title>My Landing Page</title>
+    <meta name="description" content="Collaboration app for developers">
+    <meta name="keywords" content="designer, developer, UX, frontend, backend, collaboration">
+    <meta name="author" content="cbegne">
+  </head>
+  <body>
+    <header>
+      <nav class="col-md-10">
+        <a href="#" id="myBrand" onclick="changeNav(this.id)">My Brand</a>
+        <a href="#/features" class="rippling peach navItem" id="nav-features" onclick="changeNav(this.id)">
+          <div>Features</div>
+        </a>
+        <a href="#/pricing" class="rippling peach navItem" id="nav-pricing" onclick="changeNav(this.id)">
+          <div>Pricing</div>
+        </a>
+        <a href="#/customers" class="rippling peach navItem" id="nav-customers" onclick="changeNav(this.id)">
+          <div>Customers</div>
+        </a>
+        <a href="#/support" class="rippling peach navItem" id="nav-support" onclick="changeNav(this.id)">
+          <div>Support</div>
+        </a>
+        <a href="#/about" class="rippling peach navItem" id="nav-about" onclick="changeNav(this.id)">
+          <div>About</div>
+        </a>
+      </nav>
+      <nav>
+        <a href="#/signup" class="signup rippling maroon" id="signup" onclick="changeNav(this.id)">Sign up</a>
+        <a href="#/login" class="rippling peach" id="login" onclick="changeNav(this.id)">Login</a>
+      </nav>
+    </header>
+    <div class="intro">
+      <div class="tagline">
+        <h1>Ulla priscis ulla arbitror est</h1>
+        <h2>Altera Salamis Cyprus templo aedificet externi insignis instructam procul omnibusque</h2>
+        <!-- bird and foot prints -->
+        <img src="./public/img/bird.svg" alt="bird" id="bird">
+        <img src="./public/img/bird-prints.png" alt="bird-prints" class="bird-prints" id="bird-print-1">
+        <img src="./public/img/bird-prints.png" alt="bird-prints" class="bird-prints" id="bird-print-2">
+        <img src="./public/img/bird-prints.png" alt="bird-prints" class="bird-prints" id="bird-print-3">
+        <img src="./public/img/bird-prints.png" alt="bird-prints" class="bird-prints" id="bird-print-4">
+        <img src="./public/img/bird-prints.png" alt="bird-prints" class="bird-prints" id="bird-print-5">
+      </div>
+      <!-- Carousel start -->
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="./public/img/ameen-fahmy-275097.jpg" alt="">
+          </div>
+
+          <div class="item">
+            <img src="./public/img/boris-smokrovic-166984.jpg" alt="">
+          </div>
+
+          <div class="item">
+            <img src="./public/img/yiting-shen-180207.jpg" alt="">
+          </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!-- Carousel end -->
+    </div>
+    <div class="quotes">
+      <blockquote>
+        "Indumento sexu nefas fuere quo hoc originis vivus obnoxiae sexu est
+        altae exustus originis conplures peremptae altera mortem ex <br> ad quoque"
+      </blockquote>
+      <div class="author">
+        <img src="./public/img/christopher-campbell-28567.jpg" alt="person">
+        <div class="authorInfo">
+          <div class="authorNameTitle">Marie, CEO of</div>
+          <div class="authorCompany">Company</div>
+        </div>
+      </div>
+    </div>
+    <div class="companies">
+      <a href="#/stories">Read their stories</a>
+      <img src="./public/img/logo1.png" alt="logo1">
+      <img src="./public/img/logo2.png" alt="logo2">
+      <img src="./public/img/logo3.png" alt="logo3">
+      <img src="./public/img/logo4.png" alt="logo4">
+      <img src="./public/img/logo5.jpeg" alt="logo5">
+      <p>Nec tribui Cato hi tantum Fanni Galum non sed tribui.</p>
+    </div>
+    <nav class="bottom">
+      <a href="#/features" class="rippling peach navItem" id="nav-features-bottom" onclick="changeNav(this.id)">
+        <div>Features</div>
+      </a>
+      <a href="#/pricing" class="rippling peach navItem" id="nav-pricing-bottom" onclick="changeNav(this.id)">
+        <div>Pricing</div>
+      </a>
+      <a href="#/customers" class="rippling peach navItem" id="nav-customers-bottom" onclick="changeNav(this.id)">
+        <div>Customers</div>
+      </a>
+      <a href="#/support" class="rippling peach navItem" id="nav-support-bottom" onclick="changeNav(this.id)">
+        <div>Support</div>
+      </a>
+      <a href="#/about" class="rippling peach navItem" id="nav-about-bottom" onclick="changeNav(this.id)">
+        <div>About</div>
+      </a>
+    </nav>
+    <footer>
+      <img src="./public/img/bird.png" alt="bird" id="bird-footer">
+      <div class="footerContainer">
+        <a href="https://github.com/cbegne" rel="author">
+          <span class="fa fa-github"></span>
+        </a>
+        <div class="linkContainer">
+          <a href="#/terms">Terms</a>
+          <a href="#/privacy">Privacy</a>
+          <a href="https://www.facebook.com/" target="_blank" rel="external noopener">Facebook group</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
