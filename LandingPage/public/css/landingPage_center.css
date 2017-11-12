@@ -66,19 +66,19 @@ h2 {
   right: 15vw;
   top: 30px;
   width: 80px;
-  /*animation: fadeIn 1s ease-in, wiggle 3s;*/
+  animation: fadeIn 1s ease-in, wiggle 3s;
   animation-delay: 6s;
   animation-fill-mode: forwards;
-  opacity: 1;
+  opacity: 0;
 }
 
 .bird-prints {
   display: block;
   position: absolute;
   width: 50px;
-  /*animation: fadeIn 1s linear;*/
+  animation: fadeIn 1s linear;
   animation-fill-mode: forwards;
-  opacity: 1;
+  opacity: 0;
 }
 
 #bird-print-1 {
