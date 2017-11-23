@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-family: Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+// Colors
+$white: #fff;
+$white-50pc: rgba(255, 255, 255, 0.5);
+$white-70pc: rgba(255, 255, 255, 0.7);
+$white-90pc: rgba(246, 246, 246, 0.9);
+$blue: #65D3F8;
+$light-blue: #AFE8FB;
+$red: #F96C5B;
+$dark-grey: #383838;
+$warm-grey: #bcb5b9;
+$warm-grey-50pc: rgba(188, 181, 185, 0.5);
+$warm-grey-10pc: rgba(188, 181, 185, 0.1);
+$warm-grey-7pc: rgba(188, 181, 185, 0.07);
+
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 600;

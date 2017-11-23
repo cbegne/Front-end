@@ -1,0 +1,143 @@
+.intro {
+  background-color: $blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0 0 0;
+  color: $white;
+
+  h1 {
+    font-size: 1.3em;
+    letter-spacing: 0.05em;
+    font-weight: 100;
+  }
+
+  h2 {
+    font-size: 3.5em;
+    letter-spacing: 0.05em;
+    font-weight: 350;
+    margin: 0 0 30px 0;
+  }
+
+  .form_search {
+    display: flex;
+  }
+
+  // extend location_bar & search_bar
+  .container_bar {
+    position: relative;
+    color: $dark-grey;
+    border-radius: 25px;
+    border: 5px solid $light-blue;
+    width: 400px;
+    margin-left: 10px;
+  }
+
+  .location_bar_container {
+    @extend .container_bar;
+    display: flex;
+    width: 500px;
+
+    &:before {
+      content:"\e062";
+      font-family: Glyphicons Halflings;
+      width: 24px;
+      height: 24px;
+      font-size: 1.6em;
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      color: $red;
+      padding-left: 5px;
+    }
+
+    #location_bar {
+      display: block;
+      width: 100%;
+      padding: 10px 10px 10px 50px;
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+      outline: 0;
+      border-right: 5px solid $light-blue;
+      &::placeholder {
+        color: $warm-grey
+      }
+    }
+  }
+
+  .search_bar_container {
+    @extend .container_bar;
+
+    &:before {
+      content: "\e003";
+      font-family: Glyphicons Halflings;
+      width: 22px;
+      height: 22px;
+      font-size: 1.4em;
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      color: $red;
+      padding-left: 5px;
+    }
+
+    #search_bar {
+      display: block;
+      width: 100%;
+      padding: 10px 10px 10px 50px;
+      border-radius: 25px;
+      outline: 0;
+      &::placeholder {
+        color: $warm-grey
+      }
+    }
+  }
+
+  #submit-search {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: $red;
+    color: $white;
+    padding: 0 15px 0 15px;
+  }
+
+  img#handshake {
+    object-fit: contain;
+    width: 800px;
+  }
+}
+
+
+.middle {
+  display: flex;
+  align-items: flex-start;
+
+  img#computer {
+    object-fit: contain;
+    width: 30%;
+    margin-right: 12%;
+  }
+
+  .middle_text {
+    align-self: center;
+    width: 20%;
+    margin: auto;
+    color: $dark-grey;
+
+    h3 {
+      font-size: 2.2em;
+      font-weight: 100;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: $warm-grey;
+      margin:0;
+
+      &:nth-child(n+2) {
+        line-height: 200%;
+        font-weight: 100;
+      }
+    }
+  }
+}
