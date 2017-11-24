@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
 
 const files = 'app/scss/**/*.scss';
 
@@ -15,11 +16,14 @@ gulp.task('heya', function() {
 
 gulp.task('sass', function(){
   return gulp.src(files)
+    .pipe(sourcemaps.init())
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
     .on('error', handleError)
+    .pipe(sourcemaps.write())
     .pipe(autoprefixer({
 			browsers: ['last 2 versions'],
-			cascade: false
+			cascade: false,
+      remove: false,
 		}))
     .pipe(gulp.dest('app/css'))
 });
