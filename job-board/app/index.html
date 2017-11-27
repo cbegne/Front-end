@@ -40,8 +40,8 @@
           <input type="search" id="search_bar" placeholder="Job Title, Keyword, or Company" />
         </div>
         <div class="location_bar_container">
-          <input type="search" id="location_bar" placeholder="Job Location" />
-          <input type="submit" id="submit-search" name="" value="Find a Job" />
+          <input type="text" id="autocomplete" placeholder="Job Location" />
+          <input type="submit" id="submit-search" name="" value="Find a Job" onClick="getLocationInfos()"/>
         </div>
       </form>
       <img src="./img/handshake.jpg" id="handshake" alt="handshake">
@@ -60,13 +60,62 @@
     </div>
     <div class="bottom">
       <h3>Auto Apply Features</h3>
-      <div class="features_card">
-        <p>Skills Matchmaking</p>
-        <p>
-          Your skillset, education, and job history will automatically be matched
-          with potential job postings
-        </p>
+      <div class="features_card_group">
+        <div>
+          <div class="features_card">
+            <img src="./img/icon_1.jpg" id="skills" alt="matchmaking">
+            <p><b>Skills Matchmaking</b></p>
+            <p>
+              Your skillset, education, and job history will automatically be matched
+              with potential job postings
+            </p>
+          </div>
+          <div class="features_card">
+            <img src="./img/icon_2.jpg" id="location" alt="pinpoint">
+            <p><b>Pinpoint Location</b></p>
+            <p>
+              You can specify where you would like to auto applu to look for jobs,
+              tailoring your hunt to your desired location
+            </p>
+          </div>
+          <div class="features_card">
+            <img src="./img/icon_3.jpg" id="keywords" alt="keywords">
+            <p><b>Job Title Keywords</b></p>
+            <p>
+              You can specify exactly which jobs you would like auto apply to match
+              with and list any desired keywords
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="features_card">
+            <img src="./img/icon_4.jpg" id="filter" alt="filter">
+            <p><b>Company Filtering</b></p>
+            <p>
+              You can select a specific company or companies for auto apply to target
+              or avoid
+            </p>
+          </div>
+          <div class="features_card">
+            <img src="./img/icon_5.jpg" id="applications" alt="applications">
+            <p><b>Manage Applications</b></p>
+            <p>
+              View the progress of all submitted or potential applications organized
+              into one module
+            </p>
+          </div>
+          <div class="features_card">
+            <img src="./img/icon_6.jpg" id="batch" alt="batch">
+            <p><b>Batch Capabilities</b></p>
+            <p>
+              You can submit multiple iterations or completely different jobs, truly
+              customizing your job search
+            </p>
+          </div>
+        </div>
       </div>
     </div>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDSbNo9NV8DqqknwbynuAZ2MsR0Tl2FHU&libraries=places"></script>
+    <script type="text/javascript" src="./js/autocomplete.js"></script>
   </body>
 </html>
