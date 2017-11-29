@@ -9,18 +9,25 @@
   h1 {
     font-size: 1.3em;
     letter-spacing: 0.05em;
-    font-weight: 100;
+    font-weight: $light;
   }
 
   h2 {
     font-size: 3.5em;
     letter-spacing: 0.05em;
-    font-weight: 350;
+    font-weight: $regular;
     margin: 0 0 30px 0;
+    text-align: center;
   }
 
   .form_search {
     display: flex;
+    @include phone-up {
+      flex-direction: column;
+    }
+    @include phone-down {
+      flex-direction: column;
+    }
   }
 
   // extend location_bar & search_bar
@@ -29,7 +36,6 @@
     color: $dark-grey;
     border-radius: 25px;
     border: 5px solid $light-blue;
-    width: 400px;
     margin-left: 10px;
   }
 
@@ -37,6 +43,17 @@
     @extend .container_bar;
     display: flex;
     width: 500px;
+    @include tablet {
+      width: 350px;
+    }
+    @include phone-up {
+      margin-top: 10px;
+      width: 450px;
+    }
+    @include phone-down {
+      width: 300px;
+      margin-top: 10px;
+    }
 
     &:before {
       content:"\e062";
@@ -67,6 +84,16 @@
 
   .search_bar_container {
     @extend .container_bar;
+    width: 400px;
+    @include tablet{
+      width: 300px;
+    }
+    @include phone-up {
+      width: 450px;
+    }
+    @include phone-down {
+      width: 300px;
+    }
 
     &:before {
       content: "\e003";
@@ -99,34 +126,67 @@
     background-color: $red;
     color: $white;
     padding: 0 15px 0 15px;
+    @include phone-down {
+      width: 80px;
+      font-size: 0.9em;
+      padding: 0 10px 0 10px;
+    }
   }
 
   img#handshake {
     object-fit: contain;
     width: 800px;
+    @include tablet {
+      width: 600px;
+    }
+    @include phone-up {
+      width: 450px;
+    }
+    @include phone-down {
+      width: 300px;
+    }
   }
 }
 
-
 .middle {
   display: flex;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
   img#computer {
     object-fit: contain;
-    width: 30%;
-    margin-right: 12%;
+    width: 550px;
+    @include tablet {
+      width: 400px;
+    }
+    @include phone-up {
+      width: 200px;
+    }
+    @include phone-down {
+      display: none;
+    }
   }
 
   .middle_text {
-    align-self: center;
-    width: 20%;
-    margin: auto;
     color: $dark-grey;
+    width: 300px;
+    margin: 0 100px 0 30px;
+    @include tablet {
+      width: 250px;
+      margin: 0 50px 0 30px;
+    }
+    @include phone-up {
+      width: 300px;
+      margin: 20px 5px 20px 30px;
+    }
+    @include phone-down {
+      margin: 20px;
+    }
 
     h3 {
       font-size: 2.2em;
-      font-weight: 100;
+      font-weight: $light;
       margin-bottom: 15px;
     }
 
@@ -158,13 +218,19 @@
 
   .features_card_group {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 20px;
-
-    & > div {
-      display: flex;
-      flex-direction: row;
+    width: 1100px;
+    @include tablet {
+      width: 700px;
+    }
+    @include phone-up {
+      width: 580px;
+    }
+    @include phone-down {
+      width: 300px;
     }
 
     .features_card {
@@ -176,6 +242,9 @@
       padding: 20px;
       margin: 25px;
       text-align: center;
+      @include phone-up {
+        margin: 10px;
+      }
 
       p:first-of-type {
         color: $grey;

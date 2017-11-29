@@ -1,14 +1,16 @@
 header {
   width: 100%;
   height: 70px;
-  padding: 0 0px 0 40px;
+  padding: 0 40px 0 40px;
   background-color: $blue;
 
-  nav {
+  ul {
     height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    list-style-type: none;
+    padding-top: 20px;
 
     a {
       margin-right: 50px;
@@ -16,9 +18,14 @@ header {
       font-size: 0.95em;
       text-decoration: none;
 
-      &:hover,
       &:focus {
         text-decoration: none;
+        color: $white;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: $white-70pc;
       }
     }
 
@@ -26,6 +33,93 @@ header {
       border: 5px solid $white-50pc;
       border-radius: 25px;
       padding: 5px 15px 5px 15px;
+    }
+  }
+
+  #hamburger-content {
+    @include phone-down {
+      display: none;
+    }
+  }
+
+  #hamburger-overlay {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black-40pc;
+  }
+
+  #hamburger-button {
+    display: none;
+    @include phone-down {
+      display: block;
+    }
+    background: none;
+    border: none;
+    font-size: 2em;
+    line-height: 50px;
+    float: right;
+    margin-right: 10px;
+    color: $white;
+  }
+
+  #hamburger-sidebar {
+    display: none;
+    @include phone-down {
+      display: block;
+    }
+    position: fixed;
+    width: 150px;
+    z-index: 10;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $blue;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform .2s ease-out;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
+    }
+
+    li {
+      display: block;
+      margin: 20px;
+    }
+
+    a {
+      margin: 0;
+    }
+
+    #hamburger-sidebar-body li {
+      margin: 20px;
+    }
+
+    #hamburger-sidebar-header {
+      background-color: $red;
+      background-size: cover;
+      height: 50px;
+    }
+  }
+}
+
+.hamburger-activated {
+  #hamburger-overlay {
+    @include phone-down {
+      display: block;
+    }
+  }
+  #hamburger-sidebar {
+    @include phone-down {
+      transform: translateX(0);
     }
   }
 }
