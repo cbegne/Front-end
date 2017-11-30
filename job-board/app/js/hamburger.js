@@ -22,6 +22,5 @@ button.addEventListener('keydown', function(e) {
 overlay.addEventListener('click', function(e) {
     e.preventDefault();
 
-    console.log(this.parentNode.classList);
     this.parentNode.classList.remove(activatedClass);
 });
