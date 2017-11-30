@@ -6,7 +6,7 @@ Front-end work
 
 ## Motivation
 
-Practice HTML / CSS / javascript on popular web designs
+Practice HTML / CSS / javascript on popular web designs + recruitement test
 
 ## Projects
 
